@@ -1,0 +1,23 @@
+[package]
+name = "june"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "ergonomic remote actors via actix and canary"
+repository = "https://github.com/znx3p0/june"
+keywords = ["rpc", "actix", "actor", "microservices", "api"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix = "0.13.0"
+paste = "1.0.7"
+canary = "0.3.2"
+
+derive_more = "0.99.17"
+serde = "1.0.136"
+maquio = { version = "0.1.2", optional = true }
+tokio = { version = "1.17.0", features = [ "sync" ] }
+
+[features]
+maquio-routing = [ "maquio" ]
